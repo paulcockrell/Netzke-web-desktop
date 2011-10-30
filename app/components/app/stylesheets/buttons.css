@@ -1,0 +1,11 @@
+button.bosses_and_clerks {
+  background: transparent url('/images/icons/user_suit_large.png') no-repeat;
+}
+
+button.users {
+  background: transparent url('/images/icons/group.png') no-repeat;
+}
+
+button.about {
+  background: transparent url('/images/icons/help.png') no-repeat;
+}

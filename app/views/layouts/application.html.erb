@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netzke Task Manager</title>
+  <%= csrf_meta_tag %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "protoculous-packer" %>
+  <%= netzke_init :ext_theme => 'blue'%>
+  <script type="text/javascript">Ext.QuickTips.init();</script>
+</head>
+<body>
+<%= yield %>
+</body>
+</html>

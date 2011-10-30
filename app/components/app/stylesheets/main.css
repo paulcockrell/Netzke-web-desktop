@@ -1,0 +1,91 @@
+.desktop > .x-panel-bwrap > .x-panel-body {
+  background: #000000 url('/images/desktops/background_10.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.x-btn-mc em.x-btn-arrow {
+  padding-right: 0px;
+}
+
+#main-statusbar.x-toolbar .x-btn-tl{
+  background-position: -6px 0;
+}
+#main-statusbar.x-toolbar .x-btn-tr{
+  background-position: -9px 0;
+}
+#main-statusbar.x-toolbar .x-btn-tc{
+  background-position: 0 -9px;
+}
+
+#main-statusbar.x-toolbar .x-btn-ml{
+  background-position: -6px -24px;
+}
+#main-statusbar.x-toolbar .x-btn-mr{
+  background-position: -9px -24px;
+}
+
+#main-statusbar.x-toolbar .x-btn-mc{
+  background-position: 0 -2168px;
+}
+#main-statusbar.x-toolbar .x-btn-bl{
+  background-position: -6px -3px;
+}
+#main-statusbar.x-toolbar .x-btn-br{
+  background-position: -9px -3px;
+}
+#main-statusbar.x-toolbar .x-btn-bc{
+  background-position: 0 -18px;
+}
+
+.x-btn-mc em.x-btn-arrow{
+    padding-right: 12px;
+}
+
+.x-btn {
+  margin-right: 5px;
+}
+
+.x-statusbar .x-status-ready {
+  height: 16px;
+  margin-top: 2px;
+  padding-left: 25px !important;
+  background: transparent url('/images/icons/network_status.png') no-repeat;
+}
+
+.x-statusbar .x-status-busy {
+  height: 16px;
+  margin-top: 2px;
+  background: transparent url('/images/icons/network_status_busy.png') no-repeat;
+}
+
+#app__work_space_one button.inactive {
+  background: transparent url('/images/icons/monitor_one_inactive.png') no-repeat;
+}
+
+#app__work_space_two button.inactive {
+  background: transparent url('/images/icons/monitor_two_inactive.png') no-repeat;
+}
+
+#app__work_space_three button.inactive {
+  background: transparent url('/images/icons/monitor_three_inactive.png') no-repeat;
+}
+
+#app__work_space_four button.inactive {
+  background: transparent url('/images/icons/monitor_four_inactive.png') no-repeat;
+}
+
+#app__work_space_one button.active {
+  background: transparent url('/images/icons/monitor_one_active.png') no-repeat;
+}
+
+#app__work_space_two button.active {
+  background: transparent url('/images/icons/monitor_two_active.png') no-repeat;
+}
+
+#app__work_space_three button.active {
+  background: transparent url('/images/icons/monitor_three_active.png') no-repeat;
+}
+
+#app__work_space_four button.active {
+  background: transparent url('/images/icons/monitor_four_active.png') no-repeat;
+}

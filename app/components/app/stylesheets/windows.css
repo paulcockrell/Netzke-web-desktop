@@ -1,0 +1,27 @@
+#app__about_window .x-panel-body {
+  background-color: #CED9E7;
+}
+
+.bosses_and_clerks {
+  background: transparent url('/images/icons/user_business.png') no-repeat;
+}
+
+.users {
+  background: transparent url('/images/icons/users.png') no-repeat;
+}
+
+.about {
+  background: transparent url('/images/icons/question_frame.png') no-repeat;
+}
+
+.building_network {
+  background: transparent url('/images/icons/building_network.png') no-repeat;
+}
+
+.device {
+  background: transparent url('/images/icons/computer.png') no-repeat;
+}
+
+.chart {
+  background: transparent url('/images/icons/chart.png') no-repeat;
+}

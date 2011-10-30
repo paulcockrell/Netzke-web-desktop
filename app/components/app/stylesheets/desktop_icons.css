@@ -1,0 +1,52 @@
+/* remove the default left,center and right images from the button border*/
+.desktop-icon-text-icon .x-btn-tl, .desktop-icon-text-icon .x-btn-tr, .desktop-icon-text-icon .x-btn-tc, .desktop-icon-text-icon .x-btn-ml, .desktop-icon-text-icon .x-btn-mr, .desktop-icon-text-icon .x-btn-mc, .desktop-icon-text-icon .x-btn-bl, .desktop-icon-text-icon .x-btn-br, .desktop-icon-text-icon .x-btn-bc {
+  //opacity:      0.4;
+  //-moz-opacity: 0.4;
+  //filter:       alpha(opacity=40);
+  //background-color: rgba(255,255,255,0.5);
+  background: 0;
+}
+
+.desktop-icon-text-icon .x-btn-mc {
+  background:     repeat-x 0 -2178px;
+  vertical-align: middle;
+  text-align:     center;
+  padding:        0 5px;
+  cursor:         pointer;
+  white-space:    nowrap;
+}
+       
+/* now customize the new button to have the caption below the icon */    
+.desktop-icon-text-icon .x-btn-mc .x-btn-text {
+  background-position: center center;
+  background-repeat:   no-repeat;
+  padding-left:        0px;
+  padding-top:         50px;
+  padding-bottom:      0px;
+  padding-right:       0px;
+  height:              70px;
+  width:               75px;
+}
+
+.desktop-icon-text-icon em {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.desktop-icon-text-icon button {
+  color: white;
+}
+
+.dd-proxy {
+  opacity:      0.4;
+  -moz-opacity: 0.4;
+  filter:       alpha(opacity=40);
+}
+
+/* CSS to place image in desktop icon */
+.desktop-icon-text-icon .tag_blue {
+  background: transparent url('/images/icons/tag_blue.png') no-repeat;
+}
+
+.desktop-icon-text-icon .users {
+  background: transparent url('/images/icons/group.png') no-repeat;
+}
