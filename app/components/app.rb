@@ -62,44 +62,58 @@ class App < Netzke::Basepack::SimpleApp
         :menu => [{
           :text => 'Users',
           :id   => 'app__users_menu',
-          :icon => 'images/icons/computer.png',
+          :icon => 'images/icons/users.png',
           :menu => [{
-            :text => 'Infrastructure',
-            :id   => 'app__infrastructure_menu',
-            :icon => 'images/icons/computer.png',
-            :menu => [:author_window.action,
-                      :user_grid_window.action,
-                      :generic_user_form_window.action,
-                      :lockable_user_form_window.action,
-                      :user_form_window.action,
-                      :user_form_with_default_fields_window.action,
-                      :user_grid_with_customized_form_fields_window.action]
-            },
-            {
-            :text => 'Devices',
-            :id   => 'app__devices_menu',
-            :icon => 'images/icons/computer.png',
-            :menu => [:user_grid_window.action,
-                      :user_grid_window.action]
-            }
-          ]
+              :text => 'Form examples',
+              :id   => 'app__user_form_example_menu',
+              :icon => 'images/icons/user_female.png',
+              :menu => [:user_form_window.action,
+                        :user_form_with_default_fields_window.action,
+                        :generic_user_form_window.action,
+                        :lockable_user_form_window.action]
+            },{
+              :text => 'Grid examples',
+              :id   => 'app__user_grid_example_menu',
+              :icon => 'images/icons/user.png',
+              :menu => [:user_grid_window.action,
+                        :user_grid_with_customized_form_fields_window.action]
+            },{
+              :text => 'Misc examples',
+              :id   => 'app__user_misc_example_menu',
+              :icon => 'images/icons/user_silhouette_question.png',
+              :menu => [:author_window.action,
+                        :bosses_and_clerks_window.action]
+            }]
           },{
-            :text => 'Book',
+            :text => 'Books',
             :id   => 'app__book_menu',
-            :icon => 'images/icopns/book.png',
-            :menu => [:book_form_window.action,
-                      :book_form_with_custom_fields_window.action,
-                      :book_grid_window.action,
-                      :book_grid_with_default_values_window.action,
-                      :book_grid_with_nested_attributes_window.action,
-                      :book_grid_with_virtual_attributes_window.action,
-                      :book_paging_form_panel_window.action,
-                      :books_bound_to_author_window.action,
-                      :lockable_book_form_window.action]
+            :icon => 'images/icons/book.png',
+            :menu => [{
+              :text => 'Form examples',
+              :id   => 'app__book_form_example_menu',
+              :icon => 'images/icons/book_open_text.png',
+              :menu => [:book_form_window.action,
+                        :book_form_with_custom_fields_window.action]
+            },{
+              :text => 'Grid examples',
+              :id   => 'app__book_grid_example_menu',
+              :icon => 'images/icons/book_bookmark.png',
+              :menu => [:book_grid_window.action,
+                        :book_grid_with_default_values_window.action,
+                        :book_grid_with_nested_attributes_window.action,
+                        :book_grid_with_virtual_attributes_window.action]
+            },{
+              :text => 'Misc examples',
+              :id   => 'app__book_misc_example_menu',
+              :icon => 'images/icons/book_question.png',
+              :menu => [:book_paging_form_panel_window.action,
+                        :books_bound_to_author_window.action,
+                        :lockable_book_form_window.action]
+            }]
           },{
             :text => 'Misc',
             :id   => 'app__miscellaneous_menu',
-            :icon => 'images/icons/gear.png',
+            :icon => 'images/icons/odata.png',
             :menu => [:form_without_model_window.action,
                       :simple_accordion_window.action,
                       :simple_panel_window.action,
@@ -108,7 +122,7 @@ class App < Netzke::Basepack::SimpleApp
       },{
         :text => 'Help',
         :id   => 'app__system_menu',
-        :icon => 'images/icons/wrench.png',
+        :icon => 'images/icons/question.png',
         :menu => [:about_window.action]
       },'->',{
         :id => 'app__work_space_one',
