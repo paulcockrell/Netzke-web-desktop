@@ -9,7 +9,7 @@ class SimpleAccordionWindow < MasterWindow
       :minimizable  => true,
       :maximizable  => true,
       :persistence  => true,
-      :icon_cls      => "users",
+      :icon_cls     => "misc",
       :items        => [{
                           :class_name => "SimpleAccordion",
         	          :header => false, :border => true

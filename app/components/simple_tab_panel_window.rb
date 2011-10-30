@@ -9,7 +9,7 @@ class SimpleTabPanelWindow < MasterWindow
       :minimizable  => true,
       :maximizable  => true,
       :persistence  => true,
-      :icon_cls      => "users",
+      :icon_cls     => "misc",
       :items        => [{
                           :class_name => "SimpleTabPanel",
         	          :header => false, :border => true

@@ -9,7 +9,7 @@ class BookGridWithNestedAttributesWindow < MasterWindow
       :minimizable  => true,
       :maximizable  => true,
       :persistence  => true,
-      :icon_cls      => "users",
+      :icon_cls      => "book",
       :items        => [{
                           :class_name => "BookGridWithNestedAttributes",
         	          :header => false, :border => true

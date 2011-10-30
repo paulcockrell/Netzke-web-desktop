@@ -9,7 +9,7 @@ class BookGridWithDefaultValuesWindow < MasterWindow
       :minimizable  => true,
       :maximizable  => true,
       :persistence  => true,
-      :icon_cls      => "users",
+      :icon_cls      => "book",
       :items        => [{
                           :class_name => "BookGridWithDefaultValues",
         	          :header => false, :border => true

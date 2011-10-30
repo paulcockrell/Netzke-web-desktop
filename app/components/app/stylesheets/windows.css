@@ -11,17 +11,13 @@
 }
 
 .about {
-  background: transparent url('/images/icons/question_frame.png') no-repeat;
+  background: transparent url('/images/icons/information_frame.png') no-repeat;
 }
 
-.building_network {
-  background: transparent url('/images/icons/building_network.png') no-repeat;
+.book {
+  background: transparent url('/images/icons/book.png') no-repeat;
 }
 
-.device {
-  background: transparent url('/images/icons/computer.png') no-repeat;
-}
-
-.chart {
-  background: transparent url('/images/icons/chart.png') no-repeat;
+.misc {
+  background: transparent url('/images/icons/odata_small.png') no-repeat;
 }

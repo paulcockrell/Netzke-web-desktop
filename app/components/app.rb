@@ -168,127 +168,127 @@ class App < Netzke::Basepack::SimpleApp
          :handler => :load_window
 
   action :author_window,
-         :icon => :question_frame,
+         :icon => :users,
          :isDesktopable => true,
          :text => "Authors",
          :handler => :load_window
 
   action :book_form_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
          :text => "Book form",
          :handler => :load_window
 
   action :book_form_with_custom_fields_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
          :text => "Book form custom fields",
          :handler => :load_window
 
   action :book_form_with_nested_attributes_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
          :text => "Book form nested attributes",
          :handler => :load_window
 
   action :book_grid_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
          :text => "Book grid",
          :handler => :load_window
 
   action :book_grid_with_default_values_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
          :text => "Book grid default values",
          :handler => :load_window
 
   action :book_grid_with_nested_attributes_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
          :text => "Book grid nested attributes",
          :handler => :load_window
 
   action :book_grid_with_virtual_attributes_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
          :text => "Book grid virtual attributes",
          :handler => :load_window
 
   action :book_paging_form_panel_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
          :text => "Book paging form panel",
          :handler => :load_window
 
   action :books_bound_to_author_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
          :text => "Books bound to author",
          :handler => :load_window
 
   action :form_without_model_window,
-         :icon => :question_frame,
+         :icon => :odata_small,
          :isDesktopable => true,
          :text => "Form without model",
          :handler => :load_window
 
   action :generic_user_form_window,
-         :icon => :question_frame,
+         :icon => :users,
          :isDesktopable => true,
          :text => "Generic user form",
          :handler => :load_window
 
   action :lockable_book_form_window,
-         :icon => :question_frame,
+         :icon => :book,
          :isDesktopable => true,
-         :text => "Locable book form",
+         :text => "Lockable book form",
          :handler => :load_window
 
   action :lockable_user_form_window,
-         :icon => :question_frame,
+         :icon => :users,
          :isDesktopable => true,
          :text => "Locable user form",
          :handler => :load_window
 
   action :simple_accordion_window,
-         :icon => :question_frame,
+         :icon => :odata_small,
          :isDesktopable => true,
          :text => "Simple accordion",
          :handler => :load_window
 
   action :simple_panel_window,
-         :icon => :question_frame,
+         :icon => :odata_small,
          :isDesktopable => true,
          :text => "Simple panel",
          :handler => :load_window
 
   action :simple_tab_panel_window,
-         :icon => :question_frame,
+         :icon => :odata_small,
          :isDesktopable => true,
          :text => "Simple tab panel",
          :handler => :load_window
 
   action :user_form_window,
-         :icon => :question_frame,
+         :icon => :users,
          :isDesktopable => true,
          :text => "User form panel",
          :handler => :load_window
 
   action :user_form_with_default_fields_window,
-         :icon => :question_frame,
+         :icon => :users,
          :isDesktopable => true,
          :text => "User form with default fields",
          :handler => :load_window
 
   action :user_grid_with_customized_form_fields_window,
-         :icon => :question_frame,
+         :icon => :users,
          :isDesktopable => true,
          :text => "User grid with custom for fields",
          :handler => :load_window
 
   action :about_window,
-         :icon => :question_frame,
+         :icon => :information_frame,
          :isDesktopable => true,
          :text => "About",
          :handler => :load_window

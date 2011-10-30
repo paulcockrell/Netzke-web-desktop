@@ -9,3 +9,11 @@ button.users {
 button.about {
   background: transparent url('/images/icons/help.png') no-repeat;
 }
+
+button.book {
+  background: transparent url('/images/icons/book.png') no-repeat;
+}
+
+button.misc {
+  background: transparent url('/images/icons/odata_small.png') no-repeat;
+}

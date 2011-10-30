@@ -9,7 +9,7 @@ class BookFormWindow < MasterWindow
       :minimizable  => true,
       :maximizable  => true,
       :persistence  => true,
-      :icon_cls      => "users",
+      :icon_cls      => "book",
       :items        => [{
                           :class_name => "BookForm",
         	          :header => false, :border => true

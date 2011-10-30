@@ -9,7 +9,7 @@ class BookFormWithCustomFieldsWindow < MasterWindow
       :minimizable  => true,
       :maximizable  => true,
       :persistence  => true,
-      :icon_cls      => "users",
+      :icon_cls      => "book",
       :items        => [{
                           :class_name => "BookFormWithCustomFields",
         	          :header => false, :border => true

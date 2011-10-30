@@ -9,7 +9,7 @@ class BookGridWithVirtualAttributesWindow < MasterWindow
       :minimizable  => true,
       :maximizable  => true,
       :persistence  => true,
-      :icon_cls      => "users",
+      :icon_cls      => "book",
       :items        => [{
                           :class_name => "BookGridWithVirtualAttributes",
         	          :header => false, :border => true
