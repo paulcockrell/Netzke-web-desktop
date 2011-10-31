@@ -5,7 +5,6 @@ Ext.Window.StatusBarButton = function(item) {
            text: Ext.util.Format.ellipsis(item.title, 12),
              id: 'btn__'+item.name,
         iconCls: item.iconCls,
-           qtip: "paully",
         tooltip: item.title
   });
 },
