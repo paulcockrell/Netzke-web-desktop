@@ -248,7 +248,7 @@ class App < Netzke::Basepack::SimpleApp
   action :lockable_user_form_window,
          :icon => :users,
          :isDesktopable => true,
-         :text => "Locable user form",
+         :text => "Lockable user form",
          :handler => :load_window
 
   action :simple_accordion_window,
@@ -284,7 +284,7 @@ class App < Netzke::Basepack::SimpleApp
   action :user_grid_with_customized_form_fields_window,
          :icon => :users,
          :isDesktopable => true,
-         :text => "User grid with custom for fields",
+         :text => "User grid with custom form fields",
          :handler => :load_window
 
   action :about_window,

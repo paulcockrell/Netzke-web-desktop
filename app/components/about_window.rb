@@ -4,6 +4,8 @@ class AboutWindow < MasterWindow
   def default_config
     {
       :name         => "About",
+      :height       => 200,
+      :width        => 300,
       :minimizable  => false,
       :maximizable  => false,
       :persistence  => true,
