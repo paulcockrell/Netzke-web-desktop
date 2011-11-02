@@ -39,7 +39,7 @@ To create your own 'application' for the desktop there is very little for you to
     Create a regular Netzke component, for this example we will use a panel component containing some basic HTML.
     Location: <rails_app_path>/app/components/hello_world_panel.rb
 
-    ```ruby
+```ruby
          class HelloWorldPanel < Netzke::Basepack::Panel
            js_properties :height => 250,
                          :width  => 250,
@@ -49,7 +49,7 @@ To create your own 'application' for the desktop there is very little for you to
 
     Now we need this component to be nested within an application window that has all the fancy features, and to do this we must create a second component that inherits from MasterWindow, which itself inherits from the regular Netzke window class
     Location: <rails_app_path>/app/components/hello_world_window.rb
-    ```ruby
+```ruby
          class HelloWorldWindow < MasterWindow
            js_properties :title => "Hello world"
            def default_config
@@ -71,11 +71,11 @@ To create your own 'application' for the desktop there is very little for you to
     Okay so we have our 'application' written, lets make the desktop aware of it and hook it up to a menu and we are good to go.  The desktop is again just an extension of a regular Netzke component. In this case it inherits from SimpleApp.
     Location: <rails_app_path>/app/components/app.rb
     1. Add a reference to the **window** component:
-      ```ruby
+```ruby
            component :hello_world_window
 ```
     2. Declare an action for the window (so it loads)
-      ```ruby
+```ruby
            action :hello_world_window,
                   :icon => :information_frame,
                   :isDesktopable => true,
@@ -83,7 +83,7 @@ To create your own 'application' for the desktop there is very little for you to
                   :handler => :load_window
 ```
     3. Create a menu entry for the Hello world application. We will put it in the 'Help' menu, next to the about app. Locate the has begining with **:text => 'Help',** and add the following code snippet to the menu symbols array (make sure you seperate the array elements with a comma)
-      ```ruby
+```ruby
            :hello_world_window.action
 ```
 
