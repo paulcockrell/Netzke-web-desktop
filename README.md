@@ -94,7 +94,7 @@ Location: <rails_app_path>/app/components/app.rb
             :text => "Hello world",
             :handler => :load_window
 ```
-3. Create a menu entry for the Hello world application. We will put it in the 'Help' menu, next to the about app. Locate the has begining with **:text => 'Help',** and add the following code snippet to the menu symbols array (make sure you seperate the array elements with a comma)
+3. Create a menu entry for the Hello world application. We will put it in the 'Help' menu, next to the about app. Locate the line that begins with **:text => 'Help',** and add the following code snippet to the menu symbols array (make sure you seperate the array elements with a comma)
 
 ```ruby
      :hello_world_window.action
