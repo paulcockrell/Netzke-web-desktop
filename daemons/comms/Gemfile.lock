@@ -1,0 +1,29 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    addressable (2.2.6)
+    amq-client (0.8.3)
+      amq-protocol (>= 0.8.0)
+      eventmachine
+    amq-protocol (0.8.1)
+    amqp (0.8.0)
+      amq-client (~> 0.8.3)
+      amq-protocol (~> 0.8.0)
+      eventmachine
+    builder (3.0.0)
+    daemon-kit (0.1.8.1)
+      eventmachine (>= 0.12.10)
+    em-websocket (0.3.1)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
+    eventmachine (0.12.10)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  amqp
+  builder
+  daemon-kit
+  em-websocket
+  eventmachine

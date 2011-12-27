@@ -122,7 +122,7 @@ class App < Netzke::Basepack::SimpleApp
       },{
         :text => 'Advanced applications',
         :id   => 'app__advanced_applications_menu',
-        :icon => 'images/icons/qustion.png',
+        :icon => 'images/icons/application_block.png',
         :menu => [{
           :text => 'Hardware',
           :id   => 'app__hardware_menu',
@@ -145,14 +145,6 @@ class App < Netzke::Basepack::SimpleApp
                      ]
             }
           ]
-          },{
-            :text => 'Monitoring',
-            :id   => 'app__monitoring_menu',
-            :icon => 'images/icons/chart_up.png',
-            :menu => [
-              :user_window.action,
-              :bosses_and_clerks_window.action
-            ]
         }]
       },{
         :text => 'Help',

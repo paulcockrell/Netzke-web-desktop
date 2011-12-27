@@ -1,0 +1,49 @@
+# Logfile created on Sat Oct 08 06:36:32 +0100 2011 by logger.rb/22285
+2011-10-08 06:36:32.670319 metric_cacher(15486) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in production mode
+2011-10-08 06:36:32.670608 metric_cacher(15486) [INFO] [daemon-kit]: Setting up trap for USR1
+2011-10-08 06:36:32.670915 metric_cacher(15486) [INFO] [daemon-kit]: Setting up trap for USR2
+2011-10-08 06:36:32.671165 metric_cacher(15486) [INFO] [daemon-kit]: Setting up trap for HUP
+2011-10-08 06:36:32.671418 metric_cacher(15486) [INFO] [daemon-kit]: Setting up trap for INT
+2011-10-08 06:36:32.671688 metric_cacher(15486) [INFO] [daemon-kit]: Setting up trap for TERM
+2011-10-08 06:36:32.672242 metric_cacher(15486) [INFO] [daemon-kit]: Running shutdown hooks
+2011-10-08 06:36:32.672291 metric_cacher(15486) [WARN] [daemon-kit]: Shutting down metric_cacher
+2011-10-08 06:36:37.966612 metric_cacher(15502) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in production mode
+2011-10-08 06:36:37.967027 metric_cacher(15502) [INFO] [daemon-kit]: Setting up trap for USR1
+2011-10-08 06:36:37.967325 metric_cacher(15502) [INFO] [daemon-kit]: Setting up trap for USR2
+2011-10-08 06:36:37.967580 metric_cacher(15502) [INFO] [daemon-kit]: Setting up trap for HUP
+2011-10-08 06:36:37.967842 metric_cacher(15502) [INFO] [daemon-kit]: Setting up trap for INT
+2011-10-08 06:36:37.967909 metric_cacher(15502) [INFO] [daemon-kit]: Setting up trap for TERM
+2011-10-08 06:36:37.968250 metric_cacher(15502) [INFO] [daemon-kit]: Running shutdown hooks
+2011-10-08 06:36:37.968299 metric_cacher(15502) [WARN] [daemon-kit]: Shutting down metric_cacher
+2011-10-08 06:36:43.196800 metric_cacher(15519) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in production mode
+2011-10-08 06:36:43.197214 metric_cacher(15519) [INFO] [daemon-kit]: Setting up trap for USR1
+2011-10-08 06:36:43.197511 metric_cacher(15519) [INFO] [daemon-kit]: Setting up trap for USR2
+2011-10-08 06:36:43.197762 metric_cacher(15519) [INFO] [daemon-kit]: Setting up trap for HUP
+2011-10-08 06:36:43.198015 metric_cacher(15519) [INFO] [daemon-kit]: Setting up trap for INT
+2011-10-08 06:36:43.198235 metric_cacher(15519) [INFO] [daemon-kit]: Setting up trap for TERM
+2011-10-08 06:36:43.199427 metric_cacher(15519) [INFO] [daemon-kit]: Running shutdown hooks
+2011-10-08 06:36:43.199613 metric_cacher(15519) [WARN] [daemon-kit]: Shutting down metric_cacher
+2011-10-08 06:36:48.461439 metric_cacher(15527) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in production mode
+2011-10-08 06:36:48.461848 metric_cacher(15527) [INFO] [daemon-kit]: Setting up trap for USR1
+2011-10-08 06:36:48.462155 metric_cacher(15527) [INFO] [daemon-kit]: Setting up trap for USR2
+2011-10-08 06:36:48.462405 metric_cacher(15527) [INFO] [daemon-kit]: Setting up trap for HUP
+2011-10-08 06:36:48.462658 metric_cacher(15527) [INFO] [daemon-kit]: Setting up trap for INT
+2011-10-08 06:36:48.462882 metric_cacher(15527) [INFO] [daemon-kit]: Setting up trap for TERM
+2011-10-08 06:36:48.464095 metric_cacher(15527) [INFO] [daemon-kit]: Running shutdown hooks
+2011-10-08 06:36:48.464289 metric_cacher(15527) [WARN] [daemon-kit]: Shutting down metric_cacher
+2011-10-08 06:36:53.697712 metric_cacher(15535) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in production mode
+2011-10-08 06:36:53.697843 metric_cacher(15535) [INFO] [daemon-kit]: Setting up trap for USR1
+2011-10-08 06:36:53.697927 metric_cacher(15535) [INFO] [daemon-kit]: Setting up trap for USR2
+2011-10-08 06:36:53.697992 metric_cacher(15535) [INFO] [daemon-kit]: Setting up trap for HUP
+2011-10-08 06:36:53.698058 metric_cacher(15535) [INFO] [daemon-kit]: Setting up trap for INT
+2011-10-08 06:36:53.698112 metric_cacher(15535) [INFO] [daemon-kit]: Setting up trap for TERM
+2011-10-08 06:36:53.698451 metric_cacher(15535) [INFO] [daemon-kit]: Running shutdown hooks
+2011-10-08 06:36:53.698501 metric_cacher(15535) [WARN] [daemon-kit]: Shutting down metric_cacher
+2011-10-08 06:36:58.952609 metric_cacher(15543) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in production mode
+2011-10-08 06:36:58.952733 metric_cacher(15543) [INFO] [daemon-kit]: Setting up trap for USR1
+2011-10-08 06:36:58.952817 metric_cacher(15543) [INFO] [daemon-kit]: Setting up trap for USR2
+2011-10-08 06:36:58.952882 metric_cacher(15543) [INFO] [daemon-kit]: Setting up trap for HUP
+2011-10-08 06:36:58.952945 metric_cacher(15543) [INFO] [daemon-kit]: Setting up trap for INT
+2011-10-08 06:36:58.952999 metric_cacher(15543) [INFO] [daemon-kit]: Setting up trap for TERM
+2011-10-08 06:36:58.953311 metric_cacher(15543) [INFO] [daemon-kit]: Running shutdown hooks
+2011-10-08 06:36:58.953359 metric_cacher(15543) [WARN] [daemon-kit]: Shutting down metric_cacher

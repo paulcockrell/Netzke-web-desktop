@@ -1,0 +1,26 @@
+# Logfile created on Tue Dec 27 19:52:49 +0000 2011 by logger.rb/22285
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SystemExit: exit>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Timeout::Error: execution expired>
+#<#<Class:0xb6af8c58>: execution expired>
+#<SystemExit: exit>
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<LoadError: no such file to load -- blinkenlights>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<NameError: uninitialized constant ScanNetwork>
+#<SystemExit: exit>
+#<LoadError: no such file to load -- blinkenlights>
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SystemExit: exit>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<SystemExit: exit>

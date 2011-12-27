@@ -1,0 +1,80 @@
+#!/bin/bash
+#
+# description: COMMS provides AMQP to Websocket communication
+#              
+### BEGIN INIT INFO
+# Provides:          comms
+# Required-Start:    $prestart
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+NAME=comms
+DESC="COMMS - AMQP to WebSocket message carrier"
+DIR=/home/pcockrell/www/ria/daemons/comms
+DAEMON=$DIR/bin/comms
+PIDFILE=/home/pcockrell/www/ria/tmp/pids/$NAME.pid
+DAEMON_OPTS="--pidfile $PIDFILE start"
+
+. /lib/lsb/init-functions
+
+if ! [ -x $DAEMON ];then
+  echo "ERROR - Can't find $DAEMON"
+  exit 1 
+fi
+
+if [ $UID -gt 0 ]; then
+  echo "ERROR - must run as root"
+  exit 1
+fi
+
+cd $DIR
+
+case "$1" in
+  start)
+        log_daemon_msg "Starting $DESC"
+        start-stop-daemon --start --pidfile $PIDFILE --quiet --startas $DAEMON -- $DAEMON_OPTS
+        RETVAL=$?
+        log_end_msg $RETVAL
+        ;;
+    stop)
+        log_daemon_msg "Stopping $DESC"
+        start-stop-daemon -R TERM/15/KILL/5 --stop --quiet --pidfile $PIDFILE
+        rm -f $PIDFILE
+        RETVAL=$?
+        log_end_msg $RETVAL
+        ;;
+    restart)
+        log_daemon_msg "Restarting $DESC"
+        start-stop-daemon -R TERM/15/KILL/5 --stop --quiet --pidfile $PIDFILE
+        rm -f $PIDFILE
+        RETVAL=$?
+        log_end_msg $RETVAL
+        sleep 5
+        start-stop-daemon --start --pidfile $PIDFILE --quiet --startas $DAEMON -- $DAEMON_OPTS
+        RETVAL=$?
+        log_end_msg $RETVAL
+        ;;
+    status)
+        echo -n "Status of $DESC: "
+        if [ ! -r "$PIDFILE" ]; then
+            echo "$NAME is not running."
+            exit 3
+        fi
+        if read pid < "$PIDFILE" && ps -p "$pid" > /dev/null 2>&1; then
+            echo "$NAME is running - $pid."
+            exit 0
+        else
+            echo "$NAME is not running but $PIDFILE exists."
+            exit 1
+        fi
+        ;;
+    *)
+      echo "Usage: $0 {start|stop|restart|status}"
+      exit 1
+      ;;
+esac      
+
+exit $RETVAL

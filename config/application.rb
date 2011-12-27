@@ -1,10 +1,12 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'dalli'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
+DALLI = Dalli::Client::new('localhost:11211')
 
 module NetzkeTaskManager
   class Application < Rails::Application

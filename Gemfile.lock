@@ -32,12 +32,44 @@ GEM
     activesupport (3.0.1)
     acts_as_list (0.1.4)
     acts_as_tree (0.1.1)
+    addressable (2.2.6)
+    amq-client (0.8.3)
+      amq-protocol (>= 0.8.0)
+      eventmachine
+    amq-protocol (0.8.1)
+    amqp (0.8.0)
+      amq-client (~> 0.8.3)
+      amq-protocol (~> 0.8.0)
+      eventmachine
     arel (1.0.1)
       activesupport (~> 3.0.0)
     builder (2.1.2)
+    daemon-kit (0.1.8.1)
+      eventmachine (>= 0.12.10)
+    daemons (1.1.4)
+    dalli (1.1.2)
+    delayed_job (2.1.4)
+      activesupport (~> 3.0)
+      daemons
+    em-http-request (0.3.0)
+      addressable (>= 2.0.0)
+      escape_utils
+      eventmachine (>= 0.12.9)
+    em-websocket (0.3.1)
+      addressable (>= 2.1.1)
+      eventmachine (>= 0.12.9)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    escape_utils (0.2.4)
+    eventmachine (0.12.10)
+    ffi (0.6.3)
+      rake (>= 0.8.7)
+    gmetric (0.1.3)
+    god (0.11.0)
+    googlecharts (1.6.8)
     i18n (0.4.2)
+    macaddr (1.4.0)
+      systemu (~> 2.2.0)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -48,6 +80,9 @@ GEM
       activesupport (~> 3.0.0)
       arel (~> 1.0.1)
     mime-types (1.16)
+    net-ssh (2.2.1)
+    net-ssh-telnet (0.0.2)
+      net-ssh (>= 2.0.1)
     netzke-basepack (0.6.4)
       acts_as_list
       meta_where (>= 0.9.3)
@@ -56,6 +91,8 @@ GEM
     netzke-core (0.6.6)
       activesupport (>= 3.0.1)
     netzke-persistence (0.1.0)
+    nmap-parser (0.3.5)
+    nokogiri (1.5.0)
     polyglot (0.3.2)
     rack (1.2.4)
     rack-mount (0.6.14)
@@ -76,14 +113,20 @@ GEM
       rake (>= 0.8.4)
       thor (~> 0.14.0)
     rake (0.9.2)
+    rrd-ffi (0.2.7)
+      activesupport
+      ffi
     sqlite3 (1.3.4)
     sqlite3-ruby (1.3.3)
       sqlite3 (>= 1.3.3)
+    systemu (2.2.0)
     thor (0.14.6)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
+    uuid (2.3.4)
+      macaddr (~> 1.0)
     will_paginate (3.0.1)
 
 PLATFORMS
@@ -91,10 +134,27 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_tree
+  amqp (~> 0.8.0.RC13)
+  daemon-kit
+  daemons (~> 1.1.4)
+  dalli
+  delayed_job (~> 2.1)
+  em-http-request
+  em-websocket
+  eventmachine
+  ffi (~> 0.6.3)
+  gmetric
+  god
+  googlecharts
+  net-ssh-telnet
   netzke-basepack (~> 0.6.4)
   netzke-core (~> 0.6.6)
   netzke-persistence
+  nmap-parser
+  nokogiri
   rails (= 3.0.1)
   rake (= 0.9.2)
+  rrd-ffi (~> 0.2.7)
   sqlite3-ruby
+  uuid
   will_paginate (~> 3.0.pre2)

@@ -1,0 +1,39 @@
+module Netzke
+  module Basepack
+    class Tree < Netzke::Base
+       
+      # Our JS class will be inherited from Ext.tree.TreePanel
+      def self.js_base_class
+        "Ext.tree.TreePanel"
+      end
+        
+      # New and overriden properties of the resulting JS class
+      def self.js_extend_properties
+        {
+          :root_visible => false,
+          :root => {:text => 'Root', :id => 'source'},
+          :init_component => <<-END_OF_JAVASCRIPT.l,
+            function(){
+              // dataUrl should be set to the API point which provides us with the nodes
+              this.dataUrl = this.endpointUrl("get_children");
+              // Call the superclass' initComponent
+              #{js_full_class_name}.superclass.initComponent.call(this);
+            }
+          END_OF_JAVASCRIPT
+       }
+      end
+        
+      def is_a_leaf(item)
+        return true if item.nil?
+        item.parent.parent_id.nil? || !item.children.empty? || !item.nodes.empty? ? false : true
+      end
+
+      endpoint :get_children do |params|
+        klass = config[:model].constantize
+        node = params[:node] == 'source' ? klass.where("parent_id is NULL").first : klass.find(params[:node].to_i)
+        node.children.map{|n| {:text => n.name, :id => n.id, :leaf => is_a_leaf(n)}}
+      end
+ 
+    end
+  end
+end
