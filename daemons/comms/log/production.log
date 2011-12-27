@@ -5298,3 +5298,7 @@
 2011-12-27 23:08:25.851811 comms(15087) [INFO] comms.rb:30: Message queue started, host: "127.0.0.1", channel id: 2
 2011-12-27 23:09:25.257894 comms(15087) [INFO] comms.rb:33: Received message via AMQP: {"element_id" : "app__cmp1__devices", "return_code" : "1", "message" : "Network scan complete"}
 2011-12-27 23:09:25.258183 comms(15087) [INFO] comms.rb:35: Sending message via WebSocket: {"element_id" : "app__cmp1__devices", "return_code" : "1", "message" : "Network scan complete"}
+2011-12-27 23:14:30.698526 comms(15087) [INFO] comms.rb:33: Received message via AMQP: {"element_id" : "app__cmp1__devices", "return_code" : "1", "message" : "Network scan complete"}
+2011-12-27 23:14:30.698805 comms(15087) [INFO] comms.rb:35: Sending message via WebSocket: {"element_id" : "app__cmp1__devices", "return_code" : "1", "message" : "Network scan complete"}
+2011-12-27 23:19:59.124868 comms(15087) [INFO] comms.rb:33: Received message via AMQP: {"element_id" : "app__cmp1__devices", "return_code" : "1", "message" : "Network scan complete"}
+2011-12-27 23:19:59.125144 comms(15087) [INFO] comms.rb:35: Sending message via WebSocket: {"element_id" : "app__cmp1__devices", "return_code" : "1", "message" : "Network scan complete"}

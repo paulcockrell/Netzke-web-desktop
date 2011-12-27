@@ -136,6 +136,11 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
  * Network traffic icon on the far right of the status bar, turns red while the desktop is busy communicating to the server/rendering applications
  * Digital clock showing us the time
 
+## Advanced applications
+
+ * Recent addition of an example set of Netzke-desktop-applications that can perform long running tasks server side without locking up the main rails process. This allows the user to continue using the desktop and its other applications during these processes.
+ * There is quite a bit of stuff here that exists outside of the rails application (bashscripts etc) that requires setting up correctly for the above to work. The documentation for this will be completed soon
+
 ## More info
 
 View a *live* demo of the netzke-desktop-demo: http://netzke-desktop-demo.heroku.com

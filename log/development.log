@@ -7346,3 +7346,349 @@ Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh
   [1m[36mInfrastructure Load (0.2ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 2) LIMIT 1[0m
 Rendered text template (0.0ms)
 Completed 200 OK in 202ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:40 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"name"=>"cmp2", "component"=>"InfrastructureWindow", "cache"=>"netzkebasepackwindow,netzkebasepacksimpleapp,app,netzkebasepackgridpanel,devicemanagergrid,masterwindow,devicemanagerwindow"}], "method"=>"deliverComponent", "tid"=>5, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app"}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 53ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/netzke/dispatcher?address=app__cmp2__infrastructure_layout0__infrastructure__get_children" for 127.0.0.1 at Tue Dec 27 23:12:40 +0000 2011
+  Processing by NetzkeController#dispatcher as */*
+  Parameters: {"address"=>"app__cmp2__infrastructure_layout0__infrastructure__get_children", "node"=>"source", "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM="}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1
+  [1m[36mInfrastructure Load (0.2ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE (parent_id is NULL) LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.3ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures".parent_id = 1)
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes".infrastructure_id = 1)[0m
+  [1m[35mInfrastructure Load (0.1ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 1) LIMIT 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 143ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/netzke/dispatcher?address=app__cmp2__infrastructure_layout0__infrastructure__get_children" for 127.0.0.1 at Tue Dec 27 23:12:42 +0000 2011
+  Processing by NetzkeController#dispatcher as */*
+  Parameters: {"address"=>"app__cmp2__infrastructure_layout0__infrastructure__get_children", "node"=>"tree-3", "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM="}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1
+  [1m[36mInfrastructure Load (0.2ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 3) LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.1ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures".parent_id = 3)
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes".infrastructure_id = 3)[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 128ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/netzke/dispatcher?address=app__cmp2__infrastructure_layout0__infrastructure__get_children" for 127.0.0.1 at Tue Dec 27 23:12:43 +0000 2011
+  Processing by NetzkeController#dispatcher as */*
+  Parameters: {"address"=>"app__cmp2__infrastructure_layout0__infrastructure__get_children", "node"=>"tree-2", "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM="}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1
+  [1m[36mInfrastructure Load (0.2ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 2) LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.2ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures".parent_id = 2)
+  [1m[36mNode Load (0.3ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes".infrastructure_id = 2)[0m
+  [1m[35mNodeType Load (0.1ms)[0m  SELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" = 1) LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 151ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:44 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"item_id"=>"62", "item_type"=>"node"}], "method"=>"selectItem", "tid"=>6, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp2__infrastructure_layout0"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 62) LIMIT 1
+Completed   in 109ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+  app/helpers/infrastructure_layout_helper.rb:18:in `node_info_html'
+  app/components/infrastructure_layout.rb:45:in `select_item_endpoint'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:45 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"item_id"=>"64", "item_type"=>"node"}], "method"=>"selectItem", "tid"=>7, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp2__infrastructure_layout0"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 64) LIMIT 1
+Completed   in 108ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+  app/helpers/infrastructure_layout_helper.rb:18:in `node_info_html'
+  app/components/infrastructure_layout.rb:45:in `select_item_endpoint'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:46 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"item_id"=>"63", "item_type"=>"node"}], "method"=>"selectItem", "tid"=>8, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp2__infrastructure_layout0"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 63) LIMIT 1
+Completed   in 108ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?):
+  app/helpers/infrastructure_layout_helper.rb:18:in `node_info_html'
+  app/components/infrastructure_layout.rb:45:in `select_item_endpoint'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.3ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:50 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"name"=>"cmp3", "component"=>"DeviceWindow", "cache"=>"netzkebasepackwindow,netzkebasepacksimpleapp,app,netzkebasepackgridpanel,devicemanagergrid,masterwindow,devicemanagerwindow,netzkebasepacktree,infrastructuretree,netzkebasepackpanel,netzkebasepackborderlayoutpanel,infrastructurelayout,infrastructurewindow"}], "method"=>"deliverComponent", "tid"=>9, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp3') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp3') LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 219ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:50 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"deviceId"=>62}], "method"=>"loadData", "tid"=>10, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp3"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp3') LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 62) LIMIT 1
+  [1m[36mInfrastructure Load (0.2ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 2) LIMIT 1[0m
+Dalli::Server#connect localhost:11211
+Rendered text template (0.0ms)
+Completed 200 OK in 160ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:54 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"name"=>"cmp4", "component"=>"DeviceWindow", "cache"=>"netzkebasepackwindow,netzkebasepacksimpleapp,app,netzkebasepackgridpanel,devicemanagergrid,masterwindow,devicemanagerwindow,netzkebasepacktree,infrastructuretree,netzkebasepackpanel,netzkebasepackborderlayoutpanel,infrastructurelayout,infrastructurewindow,devicegrid,devicewindow"}], "method"=>"deliverComponent", "tid"=>11, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app"}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp4') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp4') LIMIT 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 160ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:55 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"deviceId"=>64}], "method"=>"loadData", "tid"=>12, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp4"}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp4') LIMIT 1
+  [1m[36mNode Load (0.2ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 64) LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.2ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 165ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:58 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"name"=>"cmp5", "component"=>"DeviceWindow", "cache"=>"netzkebasepackwindow,netzkebasepacksimpleapp,app,netzkebasepackgridpanel,devicemanagergrid,masterwindow,devicemanagerwindow,netzkebasepacktree,infrastructuretree,netzkebasepackpanel,netzkebasepackborderlayoutpanel,infrastructurelayout,infrastructurewindow,devicegrid,devicewindow"}], "method"=>"deliverComponent", "tid"=>13, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp5') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp5') LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 217ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:12:58 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"deviceId"=>63}], "method"=>"loadData", "tid"=>14, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp5"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp5') LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 63) LIMIT 1
+  [1m[36mInfrastructure Load (0.2ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 2) LIMIT 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 164ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:09 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"name"=>"edit_form", "record_id"=>63, "cache"=>"netzkebasepackwindow,netzkebasepacksimpleapp,app,netzkebasepackgridpanel,devicemanagergrid,masterwindow,devicemanagerwindow,netzkebasepacktree,infrastructuretree,netzkebasepackpanel,netzkebasepackborderlayoutpanel,infrastructurelayout,infrastructurewindow,devicegrid,devicewindow"}], "method"=>"deliverComponent", "tid"=>15, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp1__devices"}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp1') LIMIT 1
+  [1m[36mNode Load (0.2ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 63) LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.1ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 2) LIMIT 1
+  [1m[36mNodeType Load (0.1ms)[0m  [1mSELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" = 1) LIMIT 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 209ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:11 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"column"=>"infrastructure__label", "query"=>""}], "method"=>"getComboboxOptions", "tid"=>16, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp1__devices__edit_form__form_panel0"}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp1') LIMIT 1
+  [1m[36mInfrastructure Load (0.2ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures"[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 204ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:14 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"column"=>"node_type__label", "query"=>""}], "method"=>"getComboboxOptions", "tid"=>17, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp1__devices__edit_form__form_panel0"}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp1') LIMIT 1
+  [1m[36mNodeType Load (0.3ms)[0m  [1mSELECT "node_types".* FROM "node_types"[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 263ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:18 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"data"=>"{\"id\":63,\"ip_address\":\"192.168.1.2\",\"label\":\"\",\"hostname\":\"\",\"mac_address\":\"F0:7B:CB:21:AD:A4\",\"node_type__label\":2,\"infrastructure__label\":3}"}], "method"=>"netzkeSubmit", "tid"=>18, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp1__devices__edit_form__form_panel0"}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp1') LIMIT 1
+  [1m[36mNode Load (0.2ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 63) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "nodes" SET "hostname" = '', "infrastructure_id" = 3, "node_type_id" = 2, "updated_at" = '2011-12-27 23:13:18.259197' WHERE ("nodes"."id" = 63)
+  [1m[36mInfrastructure Load (0.5ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 3) LIMIT 1[0m
+  [1m[35mNodeType Load (0.1ms)[0m  SELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 404ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:18 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"start"=>0, "limit"=>30}], "method"=>"getData", "tid"=>19, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp1__devices"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp1') LIMIT 1[0m
+  [1m[35mNode Load (0.3ms)[0m  SELECT "nodes".* FROM "nodes" LIMIT 30 OFFSET 0
+  [1m[36mNodeType Load (0.2ms)[0m  [1mSELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" IN (1,2))[0m
+  [1m[35mInfrastructure Load (0.2ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" IN (2,3))
+  [1m[36mNodeType Load (0.1ms)[0m  [1mSELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" = 1) LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.1ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 181ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:28 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"name"=>"cmp6", "component"=>"InfrastructureWindow", "cache"=>"netzkebasepackwindow,netzkebasepacksimpleapp,app,netzkebasepackgridpanel,devicemanagergrid,masterwindow,devicemanagerwindow,netzkebasepacktree,infrastructuretree,netzkebasepackpanel,netzkebasepackborderlayoutpanel,infrastructurelayout,infrastructurewindow,devicegrid,devicewindow,netzkebasepackformpanel,netzkebasepackgridpanelrecordformwindow"}], "method"=>"deliverComponent", "tid"=>20, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp6') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp6') LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 113ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/netzke/dispatcher?address=app__cmp2__infrastructure_layout0__infrastructure__get_children" for 127.0.0.1 at Tue Dec 27 23:13:29 +0000 2011
+  Processing by NetzkeController#dispatcher as */*
+  Parameters: {"address"=>"app__cmp2__infrastructure_layout0__infrastructure__get_children", "node"=>"source", "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM="}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.2ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE (parent_id is NULL) LIMIT 1
+  [1m[36mInfrastructure Load (0.3ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures".parent_id = 1)[0m
+  [1m[35mNode Load (0.1ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes".infrastructure_id = 1)
+  [1m[36mInfrastructure Load (0.2ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 1) LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 141ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/netzke/dispatcher?address=app__cmp2__infrastructure_layout0__infrastructure__get_children" for 127.0.0.1 at Tue Dec 27 23:13:30 +0000 2011
+  Processing by NetzkeController#dispatcher as */*
+  Parameters: {"address"=>"app__cmp2__infrastructure_layout0__infrastructure__get_children", "node"=>"tree-3", "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM="}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp2') LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.2ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 3) LIMIT 1
+  [1m[36mInfrastructure Load (0.1ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures".parent_id = 3)[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes".infrastructure_id = 3)
+  [1m[36mNodeType Load (0.1ms)[0m  [1mSELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" = 2) LIMIT 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 141ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:31 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"item_id"=>"63", "item_type"=>"node"}], "method"=>"selectItem", "tid"=>21, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp6__infrastructure_layout0"}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp6') LIMIT 1
+  [1m[36mNode Load (0.2ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 63) LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.1ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 3) LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 65ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:34 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"item_id"=>"63", "item_type"=>"node"}], "method"=>"selectItem", "tid"=>22, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp6__infrastructure_layout0"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp6') LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 63) LIMIT 1
+  [1m[36mInfrastructure Load (0.1ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 3) LIMIT 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 68ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:34 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"item_id"=>"63", "item_type"=>"node"}], "method"=>"selectItem", "tid"=>23, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp6__infrastructure_layout0"}
+  [1m[35mNetzkeComponentState Load (0.1ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp6') LIMIT 1
+  [1m[36mNode Load (0.2ms)[0m  [1mSELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 63) LIMIT 1[0m
+  [1m[35mInfrastructure Load (0.2ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 3) LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 127ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:39 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"name"=>"cmp7", "component"=>"DeviceManagerWindow", "cache"=>"netzkebasepackwindow,netzkebasepacksimpleapp,app,netzkebasepackgridpanel,devicemanagergrid,masterwindow,devicemanagerwindow,netzkebasepacktree,infrastructuretree,netzkebasepackpanel,netzkebasepackborderlayoutpanel,infrastructurelayout,infrastructurewindow,devicegrid,devicewindow,netzkebasepackformpanel,netzkebasepackgridpanelrecordformwindow"}], "method"=>"deliverComponent", "tid"=>24, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp7') LIMIT 1[0m
+  [1m[35mNodeType Load (0.1ms)[0m  SELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" = 1) LIMIT 1
+  [1m[36mInfrastructure Load (0.1ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 2) LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" LIMIT 30 OFFSET 0
+  [1m[36mNodeType Load (0.1ms)[0m  [1mSELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" IN (1,2))[0m
+  [1m[35mInfrastructure Load (0.2ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" IN (2,3))
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp7') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "nodes".* FROM "nodes" LIMIT 30 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "node_types".* FROM "node_types" WHERE ("node_types"."id" IN (1,2))[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" IN (2,3))
+Rendered text template (0.0ms)
+Completed 200 OK in 305ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:42 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"name"=>"cmp8", "component"=>"DeviceWindow", "cache"=>"netzkebasepackwindow,netzkebasepacksimpleapp,app,netzkebasepackgridpanel,devicemanagergrid,masterwindow,devicemanagerwindow,netzkebasepacktree,infrastructuretree,netzkebasepackpanel,netzkebasepackborderlayoutpanel,infrastructurelayout,infrastructurewindow,devicegrid,devicewindow,netzkebasepackformpanel,netzkebasepackgridpanelrecordformwindow"}], "method"=>"deliverComponent", "tid"=>25, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp8') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp8') LIMIT 1
+Rendered text template (0.0ms)
+Completed 200 OK in 169ms (Views: 0.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM%3D" for 127.0.0.1 at Tue Dec 27 23:13:42 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"deviceId"=>63}], "method"=>"loadData", "tid"=>26, "authenticity_token"=>"fP0AThHuhwsfb4GaJM3OmPwvU6qzDyh9oC9h37MOukM=", "type"=>"rpc", "act"=>"app__cmp8"}
+  [1m[36mNetzkeComponentState Load (0.1ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp8') LIMIT 1[0m
+  [1m[35mNode Load (0.2ms)[0m  SELECT "nodes".* FROM "nodes" WHERE ("nodes"."id" = 63) LIMIT 1
+  [1m[36mInfrastructure Load (0.1ms)[0m  [1mSELECT "infrastructures".* FROM "infrastructures" WHERE ("infrastructures"."id" = 3) LIMIT 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 224ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+[network failure] Trying to reconnect... settings: {:pass=>"guest", :logging=>false, :ssl=>false, :broker=>nil, :host=>"127.0.0.1", :timeout=>2, :port=>5672, :auto_delete=>true, :user=>"guest", :frame_max=>131072, :vhost=>"/"}
+## Error job! #<#<Class:0xb72eaed4>: execution expired>
+## Scanning network completed.<br/> 3 devices found
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "delayed_jobs" SET "attempts" = 1, "last_error" = '{execution expired
+/usr/lib/ruby/1.8/timeout.rb:64:in `run''\n/home/pcockrell/www/Netzke-web-desktop/lib/broadcast.rb:28:in `message''\n/home/pcockrell/www/Netzke-web-desktop/app/helpers/scan_network.rb:41:in `success''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/backend/base.rb:105:in `call''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/backend/base.rb:105:in `hook''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/backend/base.rb:88:in `invoke_job''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:120:in `run''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:120:in `run''\n/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:119:in `run''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:177:in `reserve_and_run_one_job''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:104:in `work_off''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:103:in `times''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:103:in `work_off''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:78:in `start''\n/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:77:in `start''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:74:in `loop''\n/usr/lib/ruby/gems/1.8/gems/delayed_job-2.1.4/lib/delayed/worker.rb:74:in `start''\n/home/pcockrell/www/Netzke-web-desktop/daemons/job_runner/bin/job_runner:27\n/usr/lib/ruby/1.8/daemons/application.rb:215:in `call''\n/usr/lib/ruby/1.8/daemons/application.rb:215:in `start_proc''\n/usr/lib/ruby/1.8/daemons/daemonize.rb:192:in `call''\n/usr/lib/ruby/1.8/daemons/daemonize.rb:192:in `call_as_daemon''\n/usr/lib/ruby/1.8/daemons/application.rb:219:in `start_proc''\n/usr/lib/ruby/1.8/daemons/application.rb:255:in `start''\n/usr/lib/ruby/1.8/daemons/controller.rb:69:in `run''\n/usr/lib/ruby/1.8/daemons.rb:188:in `run_proc''\n/usr/lib/ruby/1.8/daemons/cmdline.rb:105:in `call''\n/usr/lib/ruby/1.8/daemons/cmdline.rb:105:in `catch_exceptions''\n/usr/lib/ruby/1.8/daemons.rb:187:in `run_proc''\n/home/pcockrell/www/Netzke-web-desktop/daemons/job_runner/bin/job_runner:16', "locked_at" = NULL, "locked_by" = NULL, "run_at" = '2011-12-27 23:14:10.661224', "updated_at" = '2011-12-27 23:14:04.663370' WHERE ("delayed_jobs"."id" = 24)[0m
+  [1m[35mSQL (136.3ms)[0m  UPDATE "delayed_jobs" SET locked_at = '2011-12-27 23:14:14.820452', locked_by = 'host:Mushroom pid:15090' WHERE (id = 24 and (locked_at is null or locked_at < '2011-12-27 23:09:14.820452') and (run_at <= '2011-12-27 23:14:14.820452'))
+## Before job!
+## Performing job! with options: {:element_id=>"app__cmp1__devices", :message=>"Scan network completed", :return_code=>:success_reload}
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "nodes" ("created_at", "hostname", "infrastructure_id", "ip_address", "label", "mac_address", "node_rack_id", "node_type_id", "notes", "operating_system_id", "updated_at") VALUES ('2011-12-27 23:14:30.451031', NULL, 2, '192.168.1.1', '', '00:22:3F:C8:F7:5C', NULL, 1, NULL, NULL, '2011-12-27 23:14:30.451031')[0m
+#<Node id: 65, node_rack_id: nil, hostname: nil, operating_system_id: nil, node_type_id: 1, notes: nil, created_at: "2011-12-27 23:14:30", updated_at: "2011-12-27 23:14:30", ip_address: "192.168.1.1", mac_address: "00:22:3F:C8:F7:5C", infrastructure_id: 2, label: "">
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "nodes" ("created_at", "hostname", "infrastructure_id", "ip_address", "label", "mac_address", "node_rack_id", "node_type_id", "notes", "operating_system_id", "updated_at") VALUES ('2011-12-27 23:14:30.560069', NULL, 2, '192.168.1.3', '', NULL, NULL, 1, NULL, NULL, '2011-12-27 23:14:30.560069')
+#<Node id: 66, node_rack_id: nil, hostname: nil, operating_system_id: nil, node_type_id: 1, notes: nil, created_at: "2011-12-27 23:14:30", updated_at: "2011-12-27 23:14:30", ip_address: "192.168.1.3", mac_address: nil, infrastructure_id: 2, label: "">
+## START: publish message : #<Delayed::Backend::ActiveRecord::Job id: 24, priority: 0, attempts: 1, handler: "--- !ruby/object:ScanNetwork \ndevices: {}\n\noptions:...", last_error: "{execution expired\n/usr/lib/ruby/1.8/timeout.rb:64:...", run_at: "2011-12-27 23:14:10", locked_at: "2011-12-27 23:14:14", failed_at: nil, locked_by: "host:Mushroom pid:15090", created_at: "2011-12-27 23:08:33", updated_at: "2011-12-27 23:14:04">
+Established a connection to AMQP broker..
+Publishing message: "{\"element_id\" : \"app__cmp1__devices\", \"return_code\" : \"1\", \"message\" : \"Network scan complete\"}"
+[network failure] Trying to reconnect... settings: {:pass=>"guest", :logging=>false, :ssl=>false, :broker=>nil, :host=>"127.0.0.1", :timeout=>2, :port=>5672, :auto_delete=>true, :user=>"guest", :frame_max=>131072, :vhost=>"/"}
+## Error job! #<#<Class:0xb6c07f90>: execution expired>
+## Scanning network completed.<br/> 2 devices found
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "delayed_jobs" SET "attempts" = 2, "locked_at" = NULL, "locked_by" = NULL, "run_at" = '2011-12-27 23:19:35.965232', "updated_at" = '2011-12-27 23:19:14.965880' WHERE ("delayed_jobs"."id" = 24)[0m
+  [1m[35mSQL (136.9ms)[0m  UPDATE "delayed_jobs" SET locked_at = '2011-12-27 23:19:40.157201', locked_by = 'host:Mushroom pid:15090' WHERE (id = 24 and (locked_at is null or locked_at < '2011-12-27 23:14:40.157201') and (run_at <= '2011-12-27 23:19:40.157201'))
+## Before job!
+## Performing job! with options: {:element_id=>"app__cmp1__devices", :message=>"Scan network completed", :return_code=>:success_reload}
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "nodes" ("created_at", "hostname", "infrastructure_id", "ip_address", "label", "mac_address", "node_rack_id", "node_type_id", "notes", "operating_system_id", "updated_at") VALUES ('2011-12-27 23:19:58.675073', NULL, 2, '192.168.1.1', '', '00:22:3F:C8:F7:5C', NULL, 1, NULL, NULL, '2011-12-27 23:19:58.675073')[0m
+#<Node id: 67, node_rack_id: nil, hostname: nil, operating_system_id: nil, node_type_id: 1, notes: nil, created_at: "2011-12-27 23:19:58", updated_at: "2011-12-27 23:19:58", ip_address: "192.168.1.1", mac_address: "00:22:3F:C8:F7:5C", infrastructure_id: 2, label: "">
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "nodes" ("created_at", "hostname", "infrastructure_id", "ip_address", "label", "mac_address", "node_rack_id", "node_type_id", "notes", "operating_system_id", "updated_at") VALUES ('2011-12-27 23:19:58.852041', NULL, 2, '192.168.1.2', '', 'F0:7B:CB:21:AD:A4', NULL, 1, NULL, NULL, '2011-12-27 23:19:58.852041')
+#<Node id: 68, node_rack_id: nil, hostname: nil, operating_system_id: nil, node_type_id: 1, notes: nil, created_at: "2011-12-27 23:19:58", updated_at: "2011-12-27 23:19:58", ip_address: "192.168.1.2", mac_address: "F0:7B:CB:21:AD:A4", infrastructure_id: 2, label: "">
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "nodes" ("created_at", "hostname", "infrastructure_id", "ip_address", "label", "mac_address", "node_rack_id", "node_type_id", "notes", "operating_system_id", "updated_at") VALUES ('2011-12-27 23:19:58.985812', NULL, 2, '192.168.1.3', '', NULL, NULL, 1, NULL, NULL, '2011-12-27 23:19:58.985812')[0m
+#<Node id: 69, node_rack_id: nil, hostname: nil, operating_system_id: nil, node_type_id: 1, notes: nil, created_at: "2011-12-27 23:19:58", updated_at: "2011-12-27 23:19:58", ip_address: "192.168.1.3", mac_address: nil, infrastructure_id: 2, label: "">
+## START: publish message : #<Delayed::Backend::ActiveRecord::Job id: 24, priority: 0, attempts: 2, handler: "--- !ruby/object:ScanNetwork \ndevices: {}\n\noptions:...", last_error: "{execution expired\n/usr/lib/ruby/1.8/timeout.rb:64:...", run_at: "2011-12-27 23:19:35", locked_at: "2011-12-27 23:19:40", failed_at: nil, locked_by: "host:Mushroom pid:15090", created_at: "2011-12-27 23:08:33", updated_at: "2011-12-27 23:19:14">
+Established a connection to AMQP broker..
+Publishing message: "{\"element_id\" : \"app__cmp1__devices\", \"return_code\" : \"1\", \"message\" : \"Network scan complete\"}"
