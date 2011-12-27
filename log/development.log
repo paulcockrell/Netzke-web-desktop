@@ -3302,3 +3302,62 @@ Started POST "/netzke/direct/?authenticity_token=nvRRjhCI9I63R0iZaJhRVGdJk0YzP61
   [1m[35mCACHE (0.0ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp3') LIMIT 1
 Rendered text template (0.0ms)
 Completed 200 OK in 34ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 31 18:18:44 +0000 2011
+  Processing by ApplicationController#index as HTML
+Rendered application/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/netzke/ext.css" for 127.0.0.1 at Mon Oct 31 18:18:45 +0000 2011
+  Processing by NetzkeController#ext as CSS
+Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/netzke/ext.js" for 127.0.0.1 at Mon Oct 31 18:18:45 +0000 2011
+  Processing by NetzkeController#ext as JS
+Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/netzke/ext.js" for 127.0.0.1 at Mon Oct 31 18:18:45 +0000 2011
+  Processing by NetzkeController#ext as JS
+Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Dec 27 15:40:29 +0000 2011
+  Processing by ApplicationController#index as HTML
+Rendered application/index.html.erb within layouts/application (309.7ms)
+Completed 200 OK in 432ms (Views: 430.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/netzke/ext.css" for 127.0.0.1 at Tue Dec 27 15:40:30 +0000 2011
+  Processing by NetzkeController#ext as CSS
+Rendered text template (0.0ms)
+Completed 200 OK in 71ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/netzke/ext.js" for 127.0.0.1 at Tue Dec 27 15:40:30 +0000 2011
+  Processing by NetzkeController#ext as JS
+Rendered text template (0.0ms)
+Completed 200 OK in 30ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/netzke/direct/?authenticity_token=wdGeOQeDI4udyTkJjs%2BncxGxz%2FYTeJu0uTGj0lyi4Gw%3D" for 127.0.0.1 at Tue Dec 27 15:40:36 +0000 2011
+  Processing by NetzkeController#direct as */*
+  Parameters: {"data"=>[{"name"=>"cmp1", "component"=>"BookFormWindow", "cache"=>"netzkebasepackwindow,netzkebasepacksimpleapp,app"}], "method"=>"deliverComponent", "tid"=>2, "authenticity_token"=>"wdGeOQeDI4udyTkJjs+ncxGxz/YTeJu0uTGj0lyi4Gw=", "type"=>"rpc", "act"=>"app"}
+  [1m[36mSQL (6.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mNetzkeComponentState Load (0.3ms)[0m  SELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp1') LIMIT 1
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 1[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE ("authors"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "netzke_component_states".* FROM "netzke_component_states" WHERE ("netzke_component_states"."component" = 'app__cmp1') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "books".* FROM "books" LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE ("authors"."id" = 1) LIMIT 1[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 313ms (Views: 0.7ms | ActiveRecord: 7.5ms)
