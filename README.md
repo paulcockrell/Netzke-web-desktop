@@ -138,8 +138,33 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
 
 ## Advanced applications
 
- * Recent addition of an example set of Netzke-desktop-applications that can perform long running tasks server side without locking up the main rails process. This allows the user to continue using the desktop and its other applications during these processes.
- * There is quite a bit of stuff here that exists outside of the rails application (bashscripts etc) that requires setting up correctly for the above to work. The documentation for this will be completed soon
+ * An example set of advanced Netzke-desktop-applications that can perform long running tasks server side without locking up the main rails process. This allows the user to continue using the desktop and its other applications during these processes.
+ 
+### What do the advanced applications do?
+
+ * The purpose of these applications is to demonstrate an example real world implementation of the Netzke desktop. It is a basic networked-computer monitoring tool. We have an infrastructure manager, and a device manager. The infrastructure manager alows us to define the locations in our network infrastructure, to which we can assign machines. The device manager alows us to automatically scan for networked machines. These machines can then be assigned to locations within the network. We can also view a machines metrics (if it reports ganglia data) and from these generate basic graphs.
+
+### New Netzke-based web-desktop features
+
+ * The implementation of the tree view panel
+ * A different (much cooler) way to present applications menus courtesy of Steve Brownlees post here (http://www.fusioncube.net/index.php/sencha-extjs-making-a-boring-and-a-cool-toolbar-for-an-application)
+ * Toast messages courtesy of Edouard Fattal here (http://www.sencha.com/forum/showthread.php?32365-Ext.ux.Notification)
+
+### New server-side features
+ * Tabless model using data stored in memcache
+ * Daemons - a collection of four, required to make the advanced applications work
+  * God - a process monitoring framework. This is used to start and monitor the other daemons.
+  * Job_runner - using delayed_job to run rails class methods in seperate processes to the rails process. This alows rails to continue processing requests while these long running blocks of code are run in the background. This is useful to ensure the Netzke web-desktop continues to respond to the users. This also makes user of 'Broadcast' the AMQP messaging class that sends messages to other clients.
+  * Comms - using AMQP and Eventmachine and websockets to collect serverside messages (such as those from the Job_runner daemon) and relay (push) them to the clients browser. This alows us to have the server update/control the Netzke desktop and its applications where necessary.
+  * Metrics_cacher - collects machine metrics and stores them into memcache store. This data is used by our metrics model that is tableless.
+  * Bashscripts used for (re)starting and stoping our daemons, as required by our implementation of God. 
+ * Other dependancies
+  * memcache - non-persistant datastore, this is used by a tableless model
+  * ganglia data monitor - used to collect machine metrics
+
+### Advanced application dependancies setup guide
+
+ * To be completed...
 
 ## More info
 
