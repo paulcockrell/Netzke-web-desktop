@@ -168,7 +168,7 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
 
 ## More info
 
-View a *live* demo of the netzke-desktop-demo: http://netzke-desktop-demo.heroku.com
+View a *live* demo of the basic Netzke-based web-desktop: http://netzke-desktop-demo.heroku.com
 
 Official Netzke project site: http://netzke.org
 
