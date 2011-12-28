@@ -156,7 +156,7 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
   * God - a process monitoring framework. This is used to start and monitor the other daemons.
   * Job_runner - using delayed_job to run rails class methods in seperate processes to the rails process. This alows rails to continue processing requests while these long running blocks of code are run in the background. This is useful to ensure the Netzke web-desktop continues to respond to the users. This also makes user of 'Broadcast' the AMQP messaging class that sends messages to other clients.
   * Comms - using AMQP and Eventmachine and websockets to collect serverside messages (such as those from the Job_runner daemon) and relay (push) them to the clients browser. This alows us to have the server update/control the Netzke desktop and its applications where necessary.
-  * Metrics_cacher - collects machine metrics and stores them into memcache store. This data is used by our metrics model that is tableless.
+  * Metrics_cacher - collects information on machines and their metrics (but not the metric values as this is all stored in RRDS) and stores them in a memcache store. This data is used by our tabless metrics model.
   * Bashscripts used for (re)starting and stoping our daemons, as required by our implementation of God. 
  * Other dependancies
   * memcache - non-persistant datastore, this is used by a tableless model
