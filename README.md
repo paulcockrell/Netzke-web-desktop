@@ -152,11 +152,13 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
 
 ### Setting up and running server-side processes
 1. Add tree view code to the Netzke-base pack
-   Copy and rename the following file (to locate your gems folder type 'bundle show netzke-basepack):
+   * Copy and rename the following file (to locate your gems folder type 'bundle show netzke-basepack):
+
 ```ruby
      FROM: <netzke.desktop.root>/lib/netzke/tree.rb.belongs.in.netzke-basepack
      TO: <gems.folder>/netzke-basepack-0.6.4/lib/netzke/basepack/tree.rb
 ```
+
 2. Run Faye server:
     * Open a new terminal
     * Naviate to <netzke.desktop.root>
