@@ -151,14 +151,19 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
  * Faye gem for pub/sub between the server and the client browser
 
 ### Setting up and running server-side processes
- * Add tree view code to the Netzke-base pack
-  * Copy and rename the following file (to locate your gems folder type 'bundle show netzke-basepack):
-    * FROM: <netzke.desktop.root>/lib/netzke/tree.rb.belongs.in.netzke-basepack
-    * TO: <gems.folder>/netzke-basepack-0.6.4/lib/netzke/basepack/tree.rb
-  * Run Faye server:
-    1. Open a new terminal
-    2. Naviate to <netzke.desktop.root>
-    3. Enter the following command: rackup faye.ru -E production -s thin
+1. Add tree view code to the Netzke-base pack
+   Copy and rename the following file (to locate your gems folder type 'bundle show netzke-basepack):
+```ruby
+     FROM: <netzke.desktop.root>/lib/netzke/tree.rb.belongs.in.netzke-basepack
+     TO: <gems.folder>/netzke-basepack-0.6.4/lib/netzke/basepack/tree.rb
+```
+2. Run Faye server:
+    * Open a new terminal
+    * Naviate to <netzke.desktop.root>
+    * Enter the following command:
+```ruby
+     rackup faye.ru -E production -s thin
+```
   * Run delayed job daemon
     1. Open a new terminal
     2. Navigate to <netzke.desktop.root>
