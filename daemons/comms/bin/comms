@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby1.8
-#
-# Stub executable for comms
-#
-require File.expand_path('../../config/environment',  __FILE__)
-
-DaemonKit::Application.exec( DAEMON_ROOT + '/libexec/comms-daemon.rb' )

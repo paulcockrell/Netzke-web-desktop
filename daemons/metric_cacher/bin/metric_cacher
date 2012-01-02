@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby1.8
-#
-# Stub executable for metric_cacher
-#
-
-require File.expand_path('../../config/environment',  __FILE__)
-
-DaemonKit::Application.exec( DAEMON_ROOT + '/libexec/metric_cacher-daemon.rb' )
