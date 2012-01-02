@@ -140,36 +140,54 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
 
  * An example set of advanced Netzke-desktop-applications that can perform long running tasks server side without locking up the main rails process. This allows the user to continue using the desktop and its other applications during these processes.
  
-### What do the advanced applications do?
-
- * The purpose of these applications is to demonstrate an example real world implementation of the Netzke desktop. It is a basic networked-computer monitoring tool. We have an infrastructure manager, and a device manager. The infrastructure manager alows us to define the locations in our network infrastructure, to which we can assign machines. The device manager alows us to automatically scan for networked machines. These machines can then be assigned to locations within the network. We can also view a machines metrics (if it reports ganglia data) and from these generate basic graphs.
-
 ### New Netzke-based web-desktop features
 
- * The implementation of the tree view panel
+ * Implementation of the tree view panel
  * A different (much cooler) way to present applications menus courtesy of Steve Brownlees post here (http://www.fusioncube.net/index.php/sencha-extjs-making-a-boring-and-a-cool-toolbar-for-an-application)
  * Toast messages courtesy of Edouard Fattal here (http://www.sencha.com/forum/showthread.php?32365-Ext.ux.Notification)
 
 ### New server-side features
- * Tabless model using data stored in memcache
- * Daemons - a collection of four, required to make the advanced applications work
-  * God (optional) - a process monitoring framework. This, along with some scripts, is used to start and monitor the following daemons.
-  * Job_runner - using delayed_job to run rails class methods in seperate processes to the rails process. This alows rails to continue processing requests while these long running blocks of code are run in the background. This is useful to ensure the Netzke web-desktop continues to respond to the users. This also makes user of 'Broadcast' the AMQP messaging class that sends messages to other clients.
-  * Comms - using AMQP and Eventmachine and websockets to collect serverside messages (such as those from the Job_runner daemon) and relay (push) them to the clients browser. This alows us to have the server update/control the Netzke desktop and its applications where necessary.
-  * Metrics_cacher - collects information on machines and their metrics (but not the metric values as this is all stored in RRDS) and stores them in a memcache store. This data is used by our tabless metrics model.
-  * Bashscripts used for (re)starting and stoping our daemons, as required by our implementation of God. 
- * Other dependancies
-  * memcache - non-persistant datastore, this is used by a tableless model
-  * ganglia data monitor - used to collect machine metrics
+ * Delayed_job gem to run specified code outside of the main rails process
+ * Faye gem for pub/sub between the server and the client browser
 
-### Advanced application dependancies setup guide
+### Setting up and running server-side processes
+ * Add tree view code to the Netzke-base pack
+  * Copy and rename the following file (to locate your gems folder type 'bundle show netzke-basepack):
+    * FROM: <netzke.desktop.root>/lib/netzke/tree.rb.belongs.in.netzke-basepack
+    * TO: <gems.folder>/netzke-basepack-0.6.4/lib/netzke/basepack/tree.rb
+  * Run Faye server:
+    1. Open a new terminal
+    2. Naviate to <netzke.desktop.root>
+    3. Enter the following command: rackup faye.ru -E production -s thin
+  * Run delayed job daemon
+    1. Open a new terminal
+    2. Navigate to <netzke.desktop.root>
+    3. Enter the following command: rake jobs:work
+  * Run Rails server:
+    1. Open a new terminal
+    2. Navigate to <netzke.desktop.root>
+    3. If your Rails server is already running, stop it.
+    4. Enter the following command: rails s
 
- * There are a minimum of two daemons we need running to demonstrate a web-desktop application processing long running server-side tasks without locking up the entire desktop, and returning responses back to the client browser, and these are: Job_runner, Comms.
-  * In the root of the rails application navigate to the folder *daemons*: <rails.root>/daemons. This is where all worker daemons for this project are kept.
-  * Start Job_runner: bin/job_runner start
-  * Start Comms: bin/comms start
- * The logs for the daemons is in <rails.root>/log
+### Using the advanced application
+ 
+ * Open the advanced application
+ * You will have a menu, a tree view and a panel
+  * The menu triggers long running jobs on the server
+  * The tree view lists previously ran jobs
+  * The panel shows details of a job when highlighted in the tree view
+ * There are two jobs that can be run from the applications menu:
+  * Job 1 - backup emails (it doesnt really backup anything..)
+   * Clicking this menu option will set the server processing a job that runs for 7 or so seconds, and will complete successfully
+  * Job 2 - backup google emails
+   * Clicking this menu option will set the server processing a job that runs for 30 or so seconds, this will fail (on purpose) to show a job that exceeds our delayed job configuration of a maximum process time of 25 seconds
+  * While a job is running the application will be disabled, to prevent futher jobs being actioned from it
+  * When a job completes we get the following actions:
+   * We will get a Toast message on the bottom right of the desktop notifying us of the job that has completed, successful or not.
+   * The contents of the application are reloaded, thus updating the tree view with the latest completed jobs
+   * The applications mask will be removed making it responsive once again
 
+While one of the above jobs is running in this application, you may fire off another desktop application, and it will still be responsive, thus proving that the desktop can remain responsive even if we have long running jobs being triggered by its apps
 
 ## More info
 
