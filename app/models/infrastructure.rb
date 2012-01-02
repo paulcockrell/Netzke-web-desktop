@@ -1,6 +1,6 @@
 class Infrastructure < ActiveRecord::Base
   acts_as_tree
-  has_many :nodes
+  has_many :jobs
   
   def self.find_by_name(name)
     find(:all, :conditions=>["label=?",name]).first

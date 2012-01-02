@@ -6,7 +6,14 @@
   <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag "protoculous-packer" %>
   <%= netzke_init :ext_theme => 'blue'%>
+  <%= javascript_include_tag "http://localhost:9292/faye.js" %>
   <script type="text/javascript">Ext.QuickTips.init();</script>
+  <script type="text/javascript">
+    var client = new Faye.Client('http://localhost:9292/faye');
+    var public_subscription = client.subscribe('/messages/public', function(data) {
+      console.log(":: Received message - "+data);
+    });
+  </script>
 </head>
 <body>
 <%= yield %>

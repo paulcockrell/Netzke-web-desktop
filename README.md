@@ -153,7 +153,7 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
 ### New server-side features
  * Tabless model using data stored in memcache
  * Daemons - a collection of four, required to make the advanced applications work
-  * God - a process monitoring framework. This is used to start and monitor the other daemons.
+  * God (optional) - a process monitoring framework. This, along with some scripts, is used to start and monitor the following daemons.
   * Job_runner - using delayed_job to run rails class methods in seperate processes to the rails process. This alows rails to continue processing requests while these long running blocks of code are run in the background. This is useful to ensure the Netzke web-desktop continues to respond to the users. This also makes user of 'Broadcast' the AMQP messaging class that sends messages to other clients.
   * Comms - using AMQP and Eventmachine and websockets to collect serverside messages (such as those from the Job_runner daemon) and relay (push) them to the clients browser. This alows us to have the server update/control the Netzke desktop and its applications where necessary.
   * Metrics_cacher - collects information on machines and their metrics (but not the metric values as this is all stored in RRDS) and stores them in a memcache store. This data is used by our tabless metrics model.
@@ -164,7 +164,12 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
 
 ### Advanced application dependancies setup guide
 
- * To be completed...
+ * There are a minimum of two daemons we need running to demonstrate a web-desktop application processing long running server-side tasks without locking up the entire desktop, and returning responses back to the client browser, and these are: Job_runner, Comms.
+  * In the root of the rails application navigate to the folder *daemons*: <rails.root>/daemons. This is where all worker daemons for this project are kept.
+  * Start Job_runner: bin/job_runner start
+  * Start Comms: bin/comms start
+ * The logs for the daemons is in <rails.root>/log
+
 
 ## More info
 

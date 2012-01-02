@@ -1,0 +1,27 @@
+.icon-advanced-application-window {
+    background-image: url('/images/icons/burn.png') !important;
+}
+
+.icon-job-1 {
+    background-image: url('/images/icons-24/store.png') !important;
+}
+
+.icon-execute-job-1 {
+    background-image: url('/images/icons/car__arrow.png') !important;
+}
+
+.icon-job-2 {
+    background-image: url('/images/icons-24/wand-hat.png') !important;
+}
+
+.icon-execute-job-2 {
+    background-image: url('/images/icons/flask__arrow.png') !important;
+}
+
+.icon-job-3 {
+    background-image: url('/images/icons/application_wave.png') !important;
+}
+
+.icon-job-4 {
+    background-image: url('/images/icons/application_share.png') !important;
+}

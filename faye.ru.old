@@ -1,0 +1,13 @@
+require 'rubygems'
+require 'faye'
+faye_server = Faye::RackAdapter.new(:mount => '/faye', :timeout => 45)
+
+#run faye_server
+
+EM.run { 
+  thin = Rack::Handler.get('thin') 
+  thin.run(faye_server, :Port => 9292) 
+  faye_server.get_client.subscribe('/ping') do |message| 
+    puts message.inspect 
+  end 
+} 

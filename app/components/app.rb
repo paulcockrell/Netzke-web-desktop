@@ -123,29 +123,7 @@ class App < Netzke::Basepack::SimpleApp
         :text => 'Advanced applications',
         :id   => 'app__advanced_applications_menu',
         :icon => 'images/icons/application_block.png',
-        :menu => [{
-          :text => 'Hardware',
-          :id   => 'app__hardware_menu',
-          :icon => 'images/icons/computer.png',
-          :menu => [{
-            :text => 'Infrastructure',
-            :id   => 'app__infrastructure_menu',
-            :icon => 'images/icons/computer.png',
-            :menu => [
-              :infrastructure_window.action,
-              :infrastructure_manager_window.action
-            ]
-            },
-            {
-            :text => 'Devices',
-            :id   => 'app__devices_menu',
-            :icon => 'images/icons/computer.png',
-            :menu => [:device_manager_window.action,
-                      :device_type_manager_window.action
-                     ]
-            }
-          ]
-        }]
+        :menu => [:advanced_application_window.action]
       },{
         :text => 'Help',
         :id   => 'app__system_menu',
@@ -320,30 +298,11 @@ class App < Netzke::Basepack::SimpleApp
          :text => "About",
          :handler => :load_window
 
-  action :infrastructure_window,
-         :icon => :building_network,
+  action :advanced_application_window,
+         :icon => :burn,
          :isDesktopable => true,
-         :text => "Infrastructure",
+         :text => "Advanced application",
          :handler => :load_window
-  
-  action :device_manager_window,
-         :icon => :computer,
-         :isDesktopable => true,
-         :text => "Device manager",
-         :handler => :load_window
-  
-  action :infrastructure_manager_window,
-         :icon => :computer,
-         :isDesktopable => true,
-         :text => "Infrastructure manager",
-         :handler => :load_window
-  
-  action :device_type_manager_window,
-         :icon => :computer,
-         :isDesktopable => true,
-         :text => "Device type manager",
-         :handler => :load_window
-  
   
   # Component references
   component :user_grid_window
@@ -369,11 +328,6 @@ class App < Netzke::Basepack::SimpleApp
   component :user_form_window
   component :user_form_with_default_fields_window
   component :user_grid_with_customized_form_fields_window
-  component :device_manager_window
-  component :infrastructure_window
-  component :infrastructure_manager_window
-  component :device_type_manager_window
-  component :device_window
-  component :device_metric_graph_window
+  component :advanced_application_window
 
 end

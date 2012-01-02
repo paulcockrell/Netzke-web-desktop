@@ -24,3 +24,85 @@
 #<SystemStackError: stack level too deep>
 #<fatal: exception reentered>
 #<SystemExit: exit>
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<#<Class:0xb697640c>: execution expired>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<SystemExit: exit>
+#<#<Class:0xb697640c>: execution expired>
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<LoadError: no such file to load -- blinkenlights>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<NameError: uninitialized constant ScanNetwork>
+#<Errno::ENOENT: No such file or directory - /home/pcockrell/www/Netzke-web-desktop/tmp/pids/job_runner.pid>
+#<SystemExit: exit>
+#<IOError: Error parsing XML>
+#<NoMethodError: undefined method `to_time' for nil:NilClass>
+#<IOError: Error parsing XML>
+#<NoMethodError: undefined method `to_time' for nil:NilClass>
+#<IOError: Error parsing XML>
+#<IOError: Error parsing XML>
+#<NoMethodError: undefined method `to_time' for nil:NilClass>
+#<IOError: Error parsing XML>
+#<NoMethodError: undefined method `to_time' for nil:NilClass>
+#<IOError: Error parsing XML>
+#<LoadError: no such file to load -- blinkenlights>
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<#<Class:0xb74eee60>: execution expired>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Timeout::Error: execution expired>
+#<SystemExit: exit>
+#<NoMethodError: undefined method `to_time' for nil:NilClass>
+#<Timeout::Error: execution expired>
+#<#<Class:0xb74eee60>: execution expired>
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SystemExit: exit>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ENOENT: No such file or directory - /home/pcockrell/www/Netzke-web-desktop/tmp/pids/job_runner.pid>
+#<SystemExit: exit>
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<LoadError: no such file to load -- nested_multimap>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ESRCH: No such process>
+#<NameError: uninitialized constant Job>
+#<NameError: uninitialized constant Delayed::Job>
+#<NameError: uninitialized constant Job>
+#<NameError: uninitialized constant Delayed::Job>
+#<SyntaxError: (eval):1: compile error
+(eval):1: invalid regular expression; [:foo:] is not a character class: /[[:foo:]]/>
+#<SyntaxError: (eval):1: invalid regular expression; [:foo:] is not a character class: /[[:foo:]]/>
+#<SyntaxError: (eval):1: compile error
+(eval):1: invalid regular expression; [:word:] is not a character class: /[[:word:]]/>
+#<SyntaxError: (eval):1: invalid regular expression; [:word:] is not a character class: /[[:word:]]/>
+#<SyntaxError: (eval):1: compile error
+(eval):1: invalid regular expression; [:ascii:] is not a character class: /[[:ascii:]]/>
+#<SyntaxError: (eval):1: invalid regular expression; [:ascii:] is not a character class: /[[:ascii:]]/>
+#<SyntaxError: (eval):1: compile error
+(eval):1: undefined (?...) sequence: /(?<foo>.*)/>
+#<SyntaxError: (eval):1: undefined (?...) sequence: /(?<foo>.*)/>
+#<LoadError: no such file to load -- regin>
+#<LoadError: no such file to load -- nested_multimap_ext>
+#<LoadError: no such file to load -- nested_multimap>
+*** below you find the most recent exception thrown, this will be likely (but not certainly) the exception that made the application exit abnormally ***
+#<SystemExit: exit>
+*** below you find all exception objects found in memory, some of them may have been thrown in your application, others may just be in memory because they are standard exceptions ***
+#<NoMemoryError: failed to allocate memory>
+#<SystemStackError: stack level too deep>
+#<fatal: exception reentered>
+#<Errno::ESRCH: No such process>
+#<Errno::ENOENT: No such file or directory - /home/pcockrell/www/Netzke-web-desktop/tmp/pids/job_runner.pid>
+#<SystemExit: exit>

@@ -17,7 +17,7 @@ gem 'daemon-kit'
 gem 'eventmachine'
 gem "amqp", "~> 0.8.0.RC13"
 gem "daemons", "~>1.1.4"
-gem "delayed_job", '~>2.1'
+gem "delayed_job", '~>2.1.4'
 gem "em-websocket"
 gem "uuid"
 gem "em-http-request"
@@ -28,3 +28,4 @@ gem "dalli"
 gem "nokogiri"
 gem "net-ssh-telnet"
 gem "googlecharts"
+gem "faye"
