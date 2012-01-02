@@ -201,13 +201,13 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
 * There are two jobs that can be run from the applications menu:
  * Job 1 - backup emails (it doesnt really backup anything..)  
 *Clicking this menu option will set the server processing a job that runs for 7 or so seconds, and will complete successfully*
- * Job 2 - backup google emails
-  * Clicking this menu option will set the server processing a job that runs for 30 or so seconds, this will fail (on purpose) to show a job that exceeds our delayed job configuration of a maximum process time of 25 seconds
+ * Job 2 - backup google emails  
+*Clicking this menu option will set the server processing a job that runs for 30 or so seconds, this will fail (on purpose) to show a job that exceeds our delayed job configuration of a maximum process time of 25 seconds*
  * While a job is running the application will be disabled, to prevent futher jobs being actioned from it
- * When a job completes we get the following actions:
-  * We will get a Toast message on the bottom right of the desktop notifying us of the job that has completed, successful or not.
-  * The contents of the application are reloaded, thus updating the tree view with the latest completed jobs
-  * The applications mask will be removed making it responsive once again
+* When a job completes we get the following actions:
+ * We will get a Toast message on the bottom right of the desktop notifying us of the job that has completed, successful or not.
+ * The contents of the application are reloaded, thus updating the tree view with the latest completed jobs
+ * The applications mask will be removed making it responsive once again
 
 While one of the above jobs is running in this application, you may fire off another desktop application, and it will still be responsive, thus proving that the desktop can remain responsive even if we have long running jobs being triggered by its apps
 
