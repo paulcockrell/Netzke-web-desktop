@@ -152,7 +152,8 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
 
 ### Setting up and running server-side processes
 **Add tree view code to the Netzke-base pack**
- * Copy and rename the following file (to locate your gems folder type 'bundle show netzke-basepack):
+
+* Copy and rename the following file (to locate your gems folder type 'bundle show netzke-basepack):
 
 ```ruby
      FROM: <netzke.desktop.root>/lib/netzke/tree.rb.belongs.in.netzke-basepack
@@ -160,28 +161,31 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
 ```
 
 **Run Faye server:**
- * Open a new terminal
- * Naviate to <netzke.desktop.root>
- * Enter the following command:
+
+* Open a new terminal
+* Naviate to <netzke.desktop.root>
+* Enter the following command:
 
 ```ruby
      rackup faye.ru -E production -s thin
 ```
 
 **Run delayed job daemon**
- * Open a new terminal
- * Navigate to <netzke.desktop.root>
- * Enter the following command: 
+
+* Open a new terminal
+* Navigate to <netzke.desktop.root>
+* Enter the following command: 
 
 ```ruby
      rake jobs:work
 ```
 
 **Run Rails server**
- * Open a new terminal
- * Navigate to <netzke.desktop.root>
- * If your Rails server is already running, stop it.
- * Enter the following command:
+
+* Open a new terminal
+* Navigate to <netzke.desktop.root>
+* If your Rails server is already running, stop it.
+* Enter the following command:
 
 ```ruby
      rails s
