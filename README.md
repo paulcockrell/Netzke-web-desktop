@@ -151,48 +151,59 @@ Netzke-desktop-demo tries to emulate regular desktop functionality:
  * Faye gem for pub/sub between the server and the client browser
 
 ### Setting up and running server-side processes
-1. Add tree view code to the Netzke-base pack
-   * Copy and rename the following file (to locate your gems folder type 'bundle show netzke-basepack):
+**Add tree view code to the Netzke-base pack**
+ * Copy and rename the following file (to locate your gems folder type 'bundle show netzke-basepack):
 
 ```ruby
      FROM: <netzke.desktop.root>/lib/netzke/tree.rb.belongs.in.netzke-basepack
      TO: <gems.folder>/netzke-basepack-0.6.4/lib/netzke/basepack/tree.rb
 ```
 
-2. Run Faye server:
-    * Open a new terminal
-    * Naviate to <netzke.desktop.root>
-    * Enter the following command:
+**Run Faye server:**
+ * Open a new terminal
+ * Naviate to <netzke.desktop.root>
+ * Enter the following command:
+
 ```ruby
      rackup faye.ru -E production -s thin
 ```
-  * Run delayed job daemon
-    1. Open a new terminal
-    2. Navigate to <netzke.desktop.root>
-    3. Enter the following command: rake jobs:work
-  * Run Rails server:
-    1. Open a new terminal
-    2. Navigate to <netzke.desktop.root>
-    3. If your Rails server is already running, stop it.
-    4. Enter the following command: rails s
+
+**Run delayed job daemon**
+ * Open a new terminal
+ * Navigate to <netzke.desktop.root>
+ * Enter the following command: 
+
+```ruby
+     rake jobs:work
+```
+
+**Run Rails server**
+ * Open a new terminal
+ * Navigate to <netzke.desktop.root>
+ * If your Rails server is already running, stop it.
+ * Enter the following command:
+
+```ruby
+     rails s
+```
 
 ### Using the advanced application
  
- * Open the advanced application
- * You will have a menu, a tree view and a panel
-  * The menu triggers long running jobs on the server
-  * The tree view lists previously ran jobs
-  * The panel shows details of a job when highlighted in the tree view
- * There are two jobs that can be run from the applications menu:
-  * Job 1 - backup emails (it doesnt really backup anything..)
-   * Clicking this menu option will set the server processing a job that runs for 7 or so seconds, and will complete successfully
-  * Job 2 - backup google emails
-   * Clicking this menu option will set the server processing a job that runs for 30 or so seconds, this will fail (on purpose) to show a job that exceeds our delayed job configuration of a maximum process time of 25 seconds
-  * While a job is running the application will be disabled, to prevent futher jobs being actioned from it
-  * When a job completes we get the following actions:
-   * We will get a Toast message on the bottom right of the desktop notifying us of the job that has completed, successful or not.
-   * The contents of the application are reloaded, thus updating the tree view with the latest completed jobs
-   * The applications mask will be removed making it responsive once again
+* Open the advanced application
+* You will have a menu, a tree view and a panel
+ * The menu triggers long running jobs on the server
+ * The tree view lists previously ran jobs
+ * The panel shows details of a job when highlighted in the tree view
+* There are two jobs that can be run from the applications menu:
+ * Job 1 - backup emails (it doesnt really backup anything..)
+  * Clicking this menu option will set the server processing a job that runs for 7 or so seconds, and will complete successfully
+ * Job 2 - backup google emails
+  * Clicking this menu option will set the server processing a job that runs for 30 or so seconds, this will fail (on purpose) to show a job that exceeds our delayed job configuration of a maximum process time of 25 seconds
+ * While a job is running the application will be disabled, to prevent futher jobs being actioned from it
+ * When a job completes we get the following actions:
+  * We will get a Toast message on the bottom right of the desktop notifying us of the job that has completed, successful or not.
+  * The contents of the application are reloaded, thus updating the tree view with the latest completed jobs
+  * The applications mask will be removed making it responsive once again
 
 While one of the above jobs is running in this application, you may fire off another desktop application, and it will still be responsive, thus proving that the desktop can remain responsive even if we have long running jobs being triggered by its apps
 
